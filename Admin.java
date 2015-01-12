@@ -229,8 +229,7 @@ public class Admin extends JFrame {
 		try {
 			con = DriverManager.getConnection(url, user, password);
 			stmt = (Statement) con.createStatement();
-			String sql = "UPDATE flights SET SeatsAvailable = SeatsAvailable - " + seats
-					+ "' WHERE idFlights = '" + idFlight + "' ";
+			String sql = "UPDATE flights SET SeatsAvailable = SeatsAvailable - "+seats+"  WHERE idFlights =  '"+idFlight+"' ";
 			stmt.executeUpdate(sql);
 			stmt.close();
 			l.closeDB();
